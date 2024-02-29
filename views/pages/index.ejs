@@ -9,12 +9,19 @@
     <main style="min-height: 100vh; background-color:#e7d3d3">
      <div>
         
-       <h1>hello  how are you</h1>
+       <h1>hello  how are you <%= title %> </h1>
        <hr/>
        <img src="./asset/abc.jpeg" height="100" width="100"/>
      </div>
+        <% arr.map((item)=>{  %>
+              <li><%= item.name %></li>
+       <% }) %> 
+
+       <% if(login ) { %>
+           <h1>hello  <%= title %> </h1>
+      <% }%>
     </main>
   
-    <%- include('../partials/footer') %>
+    <%- include('../partials/footer',{username:"utsav"}) %>
 </body>
 </html>

@@ -38,7 +38,10 @@ let app=express()
 app.set('view engine','ejs')
 app.use(express.static('views'))
  app.get('/',(req,res)=>{
-    res.render('pages/index')
+    let arr=[{name:"utsav"},{name:"Ram"},{name:"vishal"}]
+    let title="utsav jha"
+    let login=true
+    res.render('pages/index',{arr,login,title})
  })
  app.get('/about',(req,res)=>{
     res.render('pages/About')
